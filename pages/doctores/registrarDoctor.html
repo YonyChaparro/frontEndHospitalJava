@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar Doctores</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/header.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <main>
+      <div class="d-flex justify-content-center">
+        <div class="col-md-6">
+          <img src="../../images/form.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <div class="col-md-6">
+          <div class="d-flex justify-content-center">
+            <h1 class="text-center mx-auto">Registrar Doctor</h1>
+          </div>
+          <form id="formulario-doctores">
+            <div class="form-group mb-3">
+              <label for="nombreDoctorInput" class="form-label">Nombre:</label>
+              <input
+                type="text"
+                class="form-control"
+                name="nombreDoctorInput"
+                id="nombreDoctorInput"
+                placeholder="Ingrese el nombre del doctor"
+                required
+                pattern="[A-Za-z]+"
+              />
+              <div class="invalid-feedback">Ingrese un nombre válido.</div>
+            </div>
+            <div class="form-group mb-3">
+              <label for="apellidoDoctorInput" class="form-label">
+                Apellido:
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                name="apellidoDoctorInput"
+                id="apellidoDoctorInput"
+                placeholder="Ingrese el apellido del doctor"
+                required
+                pattern="[A-Za-z]+"
+              />
+              <div class="invalid-feedback">Ingresa un apellido válido.</div>
+            </div>
+            <div class="form-group mb-3">
+              <label for="especialidadDoctorInput">Seleccione una especialidad:</label>
+              <select
+                name="especialidadDoctorInput"
+                id="especialidadDoctorInput"
+                class="form-control"
+                required
+              >
+                <option value="">Seleccione una opción</option>
+              </select>
+            </div>
+            <div class="form-group mb-3">
+              <label for="consultorioInput" class="form-label"
+                >Consultorio:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                name="consultorioInput"
+                id="consultorioInput"
+                placeholder="Ingrese el consultorio"
+                required
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="emailInput">Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                name="emailInput"
+                id="emailInput"
+                placeholder="Ingrese el correo electrónico"
+              />
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary">
+                Registrar Doctor
+              </button>
+            </div>
+          </form>
+          <br />
+        </div>
+      </div>
+    </main>
+    <div id="footer-container"></div>
+
+    <script src="../../js/header.js"></script>
+    <script src="../../js/footer.js"></script>
+    <script src="/pages/doctores/js/obtenerEspecialidades.js"></script>
+    <script src="/pages/doctores/js/crearDoctores.js"></script>
+  </body>
+</html>
